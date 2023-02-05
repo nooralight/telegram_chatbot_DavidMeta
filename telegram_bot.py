@@ -1,10 +1,8 @@
 import telebot
 from class_replicate import Replicate_API
 from class_chatgpt import Gpt_API
-# from dalle_api import Dalle
-# from generate_sentence import Random_Generate
-
-BOT_TOKEN = "5905971269:AAGbKCsd7VSIth-WKyKY9wAjCXmGMm_VAI4"
+##Your telegram bot token here
+BOT_TOKEN = "Your_Telegram_Bot_Token"
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
