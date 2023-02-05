@@ -1,5 +1,5 @@
 import openai
-openai.api_key = "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"
+openai.api_key = "Your_API_key"
 
 class Gpt_API:
     def __init__(self,prompt):
