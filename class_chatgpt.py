@@ -10,8 +10,3 @@ class Gpt_API:
         print(completion)
         text = completion.choices[0].text
         return text
-
-
-# obj = Gpt_API("continue")
-
-# print(obj.get_result())
