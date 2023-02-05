@@ -3,12 +3,12 @@ import os
 os.environ['REPLICATE_API_TOKEN'] = "Your_API_key"
 
 class Replicate_API:
+    
     def __init__(self,input,model_name="cjwbw/anything-v3-better-vae",model_version="09a5805203f4c12da649ec1923bb7729517ca25fcac790e640eaa9ed66573b65"):
         self.model = replicate.models.get(model_name)
         self.version = self.model.versions.get(model_version)
         self.input = input
     def get_result(self):
-        # https://replicate.com/stability-ai/stable-diffusion/versions/f178fa7a1ae43a9a9af01b833b9d2ecf97b1bcb0acfd2dc5dd04895e042863f1#input
         inputs = {
             # Input prompt
             'prompt': self.input,
@@ -49,6 +49,3 @@ class Replicate_API:
        
         output = self.version.predict(**inputs)
         return output
-
-# obj =Replicate_API("A beautiful and mysterious wraith floats through the night, its ethereal presence a warning of danger, hd, dramatic lighting,glowing,animated")
-# print(obj.get_result())
