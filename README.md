@@ -1,3 +1,3 @@
-# telegram_chatbot_using_Dall-e
+# Telegram Bot using GPT-3 api, and Replicate api
 
 Buyer name: DavidMeta400
