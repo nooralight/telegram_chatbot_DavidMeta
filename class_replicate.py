@@ -1,6 +1,6 @@
 import replicate
 import os
-os.environ['REPLICATE_API_TOKEN'] = "28fb433d4191e61bc83aabb6e871e7a97bd1b1dc"
+os.environ['REPLICATE_API_TOKEN'] = "Your_API_key"
 
 class Replicate_API:
     def __init__(self,input,model_name="cjwbw/anything-v3-better-vae",model_version="09a5805203f4c12da649ec1923bb7729517ca25fcac790e640eaa9ed66573b65"):
