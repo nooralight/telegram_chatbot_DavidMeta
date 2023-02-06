@@ -8,7 +8,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 
 @bot.message_handler(commands=['ask'])
 def ask(message):
-    if len(message.text)<5:
+    if len(message.text)<5 or message.text[4]=='@':
         bot.reply_to(message, f"Please type your query after the command by having a space between them, like this:\n/ask Who is Joe Biden?")
     else:
         prompt = message.text[5:]
@@ -18,7 +18,7 @@ def ask(message):
 
 @bot.message_handler(commands=['gen'])
 def generate_image(message):
-    if len(message.text)<5:
+    if len(message.text)<5 or message.text[4]=='@':
         bot.reply_to(message, f"Please type your prompt after the command by having a space between them, like this:\n/gen A fox looking at the sky, hd, dramatic lighting")
     else:
         sender = message.from_user
