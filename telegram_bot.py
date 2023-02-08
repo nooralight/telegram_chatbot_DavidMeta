@@ -1,8 +1,12 @@
 import telebot
 from class_replicate import Replicate_API
 from class_chatgpt import Gpt_API
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
 ##Your telegram bot token here
-BOT_TOKEN = "Your_Telegram_Bot_Token"
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
