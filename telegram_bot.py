@@ -18,10 +18,13 @@ def ask(message):
     if len(message.text)<5 or message.text[4]=='@':
         bot.reply_to(message, f"Please type your query after the command by having a space between them, like this:\n/ask Who is Joe Biden?")
     else:
+        sender = message.from_user
+        bot.reply_to(message, f"Processing command by <a href=\"tg://user?id={sender.id}\">{sender.full_name}</a>...", parse_mode = "HTML">        
         prompt = message.text[5:]
         gpt_obj = Gpt_API(prompt)
         result = gpt_obj.get_result()
-        bot.reply_to(message, f"{result}")
+        bot.send_message(message.chat.id, f"{result}",reply_to_message_id= message.message_id)
+        bot.delete_message(chat_id= message.chat.id,message_id = message.message_id+1)
 
 @bot.message_handler(commands=['gen'])
 def generate_image(message):
