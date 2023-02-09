@@ -19,7 +19,7 @@ def ask(message):
         bot.reply_to(message, f"Please type your query after the command by having a space between them, like this:\n/ask Who is Joe Biden?")
     else:
         sender = message.from_user
-        bot.reply_to(message, f"Processing command by <a href=\"tg://user?id={sender.id}\">{sender.full_name}</a>...", parse_mode = "HTML">        
+        bot.reply_to(message, f"Processing command by <a href=\"tg://user?id={sender.id}\">{sender.full_name}</a>...", parse_mode = "HTML">
         prompt = message.text[5:]
         gpt_obj = Gpt_API(prompt)
         result = gpt_obj.get_result()
