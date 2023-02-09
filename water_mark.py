@@ -15,7 +15,7 @@ class Water_Mark:
 
         #Creating text and font object
         text = "GenAiToken.com"
-        font = ImageFont.truetype('dejavu/GothamBold.ttf', 15)
+        font = ImageFont.truetype('GothamBold.ttf', 15)
         text_size = draw.textsize(text,font=font)
         #Positioning Text
         x=6
