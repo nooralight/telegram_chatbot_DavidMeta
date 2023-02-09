@@ -1,6 +1,7 @@
 import telebot
 from class_replicate import Replicate_API
 from class_chatgpt import Gpt_API
+from water_mark import Water_Mark
 import os
 from dotenv import load_dotenv
 load_dotenv()
