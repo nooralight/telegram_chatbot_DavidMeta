@@ -55,11 +55,8 @@ def generate_image(message):
 def help(message):
     bot.reply_to(message, f"You will have two features in this bot.\n1. Image generation\n2.Text Generation\n\nBy typing,  /ask<space><your query> , you can ask the bot anything, and you will get answer.\n\nBy typing,  /gen<space><your prompt> , you can generate images with based on your prompt.")
 
-bot.polling()
-    
-@app.route('/')
-def home():
-    return 'All is well...'
+
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    bot.polling()
